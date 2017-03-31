@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>MagicWidgets</title>
+    <link href="/style.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet"/>
+</head>
+<body class = 'body2'>
+    <h1 id = 'hP2'>Magic Widgets</h1>
+
+
+    <form id="quoteType" action="#" th:action="@{/newQuote}" method="post" th:object="${quote}" >
+        <p>New quote: <input type="text" placeholder="New quote..." th:field="*{quote}"/></p>
+
+        <select name="quoteTypeList" th:field="*{quoteType}">
+            <option value="Movies">Movies</option>
+            <option value="Inspirational">Inspirational</option>
+            <option value="Academy">Academy</option>
+            <option value="All">All</option>
+        </select>
+
+        <input class="button" type="submit" value="Add quote"/>
+    </form>
+
+
+    <a href="/page1.html">
+        <div>
+            <input id = 'back' type="submit" value="Go back"/>
+        </div>
+    </a>
+
+    <a href="/index.html">
+        <div>
+            <input id = 'logout' type="submit" value="Logout"/>
+        </div>
+    </a>
+
+
+</body>
+</html>
