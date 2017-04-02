@@ -1,23 +1,23 @@
 package com.example.Domain;
 
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-/**
- * Created by Administrator on 2017-03-30.
- */
 public class Quote {
 
-    public String quote;
+    @NotNull
+    @Size(min = 3, max = 60)
+    private String quote;
 
-    public String quoteType;
+    @NotNull
+    private String quoteType;
 
-
-    public Quote (String quote, String quoteType){
-
+    public Quote(String quote, String quoteType){
         this.quote=quote;
         this.quoteType=quoteType;
     }
-    public Quote(){
+
+    public Quote() {
 
     }
 

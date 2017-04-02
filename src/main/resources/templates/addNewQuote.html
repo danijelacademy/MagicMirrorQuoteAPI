@@ -9,9 +9,11 @@
 <body class = 'body2'>
     <h1 id = 'hP2'>Magic Widgets</h1>
 
-
     <form id="quoteType" action="#" th:action="@{/newQuote}" method="post" th:object="${quote}" >
-        <p>New quote: <input type="text" placeholder="New quote..." th:field="*{quote}"/></p>
+        <p>New quote:
+            <input type="text" placeholder="New quote..." th:field="*{quote}"/>
+            <p class="validationError" th:each="err : ${#fields.errors('quote')}" th:text="${err}"></p> <!-- loopar genom alla pot. fel för fältet och skapar en li för varje fel -->
+        </p>
 
         <select name="quoteTypeList" th:field="*{quoteType}">
             <option value="Movies">Movies</option>
@@ -19,16 +21,19 @@
             <option value="Academy">Academy</option>
         </select>
 
+        <p class="validationError" th:each="err : ${#fields.errors('quote')}" th:text="${err}"></p> <!-- loopar genom alla pot. fel för fältet och skapar en li för varje fel -->
+
         <input class="button" type="submit" value="Add quote"/>
     </form>
 
+    <a href="/quotes">List of quotes</a>
 
     <a href="/dashboard">
-        <input type="button" value="Go back"/>
+        <input class="button" type="button" value="Go back"/>
     </a>
 
     <a href="/logout">
-        <input type="button" value="Logout"/>
+        <input class="button" type="button" value="Logout"/>
     </a>
 
 

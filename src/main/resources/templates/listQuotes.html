@@ -2,11 +2,17 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8"/>
-    <title>Magic quotes</title>
+    <title>MagicWidgets</title>
+    <link href="/style.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet"/>
+</head>
+<body>
+    <h1 id = 'hP2'>Magic Widgets</h1>
 
     <table>
         <tr>
-            <th>NAME</th>
+            <th>Quote</th>
+            <th>Theme</th>
         </tr>
         <tr th:each="quote : ${quotes}">
             <td th:text="${quote.quote}"></td>
@@ -14,16 +20,15 @@
         </tr>
     </table>
 
+    <a href="/newQuote">Add new quote</a>
+
+
     <a href="/dashboard">
-        <input type="button" value="Go back"/>
+        <input class="button" type="button" value="Go back"/>
     </a>
 
     <a href="/logout">
-        <input type="button" value="Logout"/>
+        <input class="button" type="button" value="Logout"/>
     </a>
-
-</head>
-<body>
-
 </body>
 </html>

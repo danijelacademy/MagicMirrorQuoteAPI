@@ -17,14 +17,15 @@ public class ApiController {
     Repository repository;
 
     @GetMapping("/api/quotes")
-    public Quote randomizeQuotes() {
+    public Quote randomizeQuotes(
+
+    ) {
         List<Quote> quotes = repository.getQuotes();
 
         Random rand = new Random();
         int randomNumber = rand.nextInt(quotes.size());
 
         return quotes.get(randomNumber);
-
     }
 
 }
