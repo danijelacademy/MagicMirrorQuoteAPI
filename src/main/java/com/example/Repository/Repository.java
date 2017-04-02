@@ -29,9 +29,9 @@ public class Repository {
 
     public List<Quote> getQuotes() {
         try (Connection conn = dataSource.getConnection();
-             PreparedStatement ps = conn.prepareStatement("SELECT* FROM Mirror.Users")) { //Hämtar alla rader i DB
+             PreparedStatement ps = conn.prepareStatement("SELECT* FROM Mirror.Quotes")) { //Hämtar alla rader i DB
             try (ResultSet rs = ps.executeQuery()) {
-                List<Quote> quotes = new ArrayList<>(); //Skapar en array
+                List<Quote> quotes = new ArrayList<>(); //Skapar en arraylist
                 while(rs.next()){
                     quotes.add(rsQuote(rs)); //Lagrar resultaten i arrayen
                 }
