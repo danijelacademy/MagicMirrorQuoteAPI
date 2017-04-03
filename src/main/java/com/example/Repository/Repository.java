@@ -29,7 +29,7 @@ public class Repository {
 
     public List<Quote> getQuotes() {
         try (Connection conn = dataSource.getConnection();
-             PreparedStatement ps = conn.prepareStatement("SELECT* FROM Mirror.Quotes")) { //Hämtar alla rader i DB
+             PreparedStatement ps = conn.prepareStatement("SELECT* FROM Quotes")) { //Hämtar alla rader i DB
             try (ResultSet rs = ps.executeQuery()) {
                 List<Quote> quotes = new ArrayList<>(); //Skapar en arraylist
                 while(rs.next()){
@@ -53,7 +53,7 @@ public class Repository {
     public User getUser(String Username, String Password) throws Exception {
 
         try (Connection conn = dataSource.getConnection();
-             PreparedStatement ps = conn.prepareStatement("SELECT mirroruser, userpassword FROM Mirror.Users WHERE mirroruser= ? AND userpassword= ?")) {
+             PreparedStatement ps = conn.prepareStatement("SELECT mirroruser, userpassword FROM Users WHERE mirroruser= ? AND userpassword= ?")) {
             ps.setString(1, Username);
             ps.setString(2, Password);
 
@@ -79,7 +79,7 @@ public class Repository {
 
     public void addQuote(String MirrorQuote, String QuoteType) throws Exception {
         try (Connection conn = dataSource.getConnection();
-             PreparedStatement ps = conn.prepareStatement("INSERT INTO Mirror.Quotes(MirrorQuote, QuoteType)VALUES (?,?)", new String []{"Id"})) {
+             PreparedStatement ps = conn.prepareStatement("INSERT INTO Quotes(MirrorQuote, QuoteType)VALUES (?,?)", new String []{"Id"})) {
             ps.setString(1, MirrorQuote);
             ps.setString(2, QuoteType);
 
