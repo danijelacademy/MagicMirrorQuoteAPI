@@ -79,7 +79,7 @@ public class Repository {
 
     public void addQuote(String MirrorQuote, String QuoteType) throws Exception {
         try (Connection conn = dataSource.getConnection();
-             PreparedStatement ps = conn.prepareStatement("INSERT INTO Quotes(MirrorQuote, QuoteType)VALUES (?,?)", new String []{"quotes.Id"})) {
+             PreparedStatement ps = conn.prepareStatement("INSERT INTO Quotes(MirrorQuote, QuoteType)VALUES (?,?)", new String []{"id"})) {
             ps.setString(1, MirrorQuote);
             ps.setString(2, QuoteType);
 
