@@ -21,8 +21,6 @@
             <option value="Academy">Academy</option>
         </select>
 
-        <p class="validationError" th:each="err : ${#fields.errors('quote')}" th:text="${err}"></p> <!-- loopar genom alla pot. fel för fältet och skapar en li för varje fel -->
-
         <input class="button" type="submit" value="Add quote"/>
     </form>
 
