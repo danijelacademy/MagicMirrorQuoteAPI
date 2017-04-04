@@ -1,3 +1,23 @@
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: grey;
+    text-decoration: none;
+}
+
+a:active {
+    color: grey;
+    text-decoration: none;
+}
+
 h1 {
     color: white;
     font-size: 100px;
@@ -6,8 +26,8 @@ h1 {
 
 #hP2 {
     color: white;
-    font-size: 70px;
-    font-family: 'Questrial', sans-serif, cursive;
+    font-size: 80px;
+    font-family: 'Questrial',  sans-serif, cursive;
 }
 
 p {
@@ -15,6 +35,8 @@ p {
   font-size: 18px;
   font-family: sans-serif;
 }
+
+
 
 td {
   color: white;
@@ -44,8 +66,7 @@ body {
     margin-right: auto;
     width: 60%
 }
-
-input {
+#input {
     background-color: white;
     text-align: center;
     border-radius: 5px;
@@ -53,18 +74,215 @@ input {
     height: 30px;
 }
 
- .button {
-    padding:5px 15px;
-    background:#ccc;
-    cursor:pointer;
-    border-radius: 5px;
-    border-radius: 5px;
-    font-family: sans-serif;
-    margin-top: 15px;
-    width: auto;
-    height: auto;
+
+.button {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px auto;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    background: #ffffff;
+    text-shadow: #ffffff 1px 1px 1px;
+    font: normal normal bold 20px arial;
+    color: #111111;
+    text-decoration: none;
+    width: 300px;
+    height: 30px;
+}
+
+.button:hover,
+.button:focus {
+    opacity: 0.5;
+    color: #111111;
+    text-decoration: none;
+}
+
+.button:active {
+    background: #999999;
+}
+
+.addButton {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    background: #ffffff;
+    text-shadow: #ffffff 1px 1px 1px;
+    font: normal normal bold 20px arial;
+    color: #111111;
+    text-decoration: none;
+    width: 150px;
+    height: 30px;
+}
+.addButton:hover,
+.addButton:focus{
+    opacity: 0.5;
+    color: #111111;
+    text-decoration: none;
+}
+.addButton:active{
+    background: #999999;
 }
 
 .validationError {
     color: darkred;
+}
+
+
+.portfolio-grid {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	text-align: center;
+	width: 100%;
+}
+
+.portfolio-grid li {
+	display: inline-block;
+	margin: 5px 5px 5px 5px;
+	vertical-align: top;
+    width:212px;
+}
+
+.portfolio-grid li > a,
+.portfolio-grid li > a img {
+    width: 100%;
+	border: none;
+	border-radius: 30px;
+	outline: none;
+	display: block;
+	position: relative;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.portfolio-grid li > a img:hover {
+    border-radius: 50%;
+    z-index: 9999;
+}
+
+.animated{-webkit-animation-duration:1s;
+-moz-animation-duration:1s;
+-o-animation-duration:1s;
+animation-duration:1s;
+-webkit-animation-fill-mode:both;
+-moz-animation-fill-mode:both;
+-o-animation-fill-mode:both;
+animation-fill-mode:both;}
+
+@-webkit-keyframes flipInX {
+    0% {
+        -webkit-transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) rotateX(-10deg);
+    }
+
+    70% {
+        -webkit-transform: perspective(400px) rotateX(10deg);
+    }
+
+    100% {
+        -webkit-transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+@-moz-keyframes flipInX {
+    0% {
+        -moz-transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+
+    40% {
+        -moz-transform: perspective(400px) rotateX(-10deg);
+    }
+
+    70% {
+        -moz-transform: perspective(400px) rotateX(10deg);
+    }
+
+    100% {
+        -moz-transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+@-o-keyframes flipInX {
+    0% {
+        -o-transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+
+    40% {
+        -o-transform: perspective(400px) rotateX(-10deg);
+    }
+
+    70% {
+        -o-transform: perspective(400px) rotateX(10deg);
+    }
+
+    100% {
+        -o-transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+@keyframes flipInX {
+    0% {
+        transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+
+    40% {
+        transform: perspective(400px) rotateX(-10deg);
+    }
+
+    70% {
+        transform: perspective(400px) rotateX(10deg);
+    }
+
+    100% {
+        transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+
+.flipInX {
+	-webkit-backface-visibility: visible !important;
+	-webkit-animation-name: flipInX;
+	-moz-backface-visibility: visible !important;
+	-moz-animation-name: flipInX;
+	-o-backface-visibility: visible !important;
+	-o-animation-name: flipInX;
+	backface-visibility: visible !important;
+	animation-name: flipInX;
+}
+#addNewQuote{
+    line-height: 50px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+select{
+    cursor: pointer;
+    border: 1px solid #000000;
+    background: #ffffff;
+    text-shadow: #ffffff 1px 1px 1px;
+    font: normal normal bold 20px arial;
+    color: #111111;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px auto;
+}
+.dropdown-content{
+    cursor: pointer;
+    background: #ffffff;
+    font: normal normal bold 20px arial;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px auto;
 }
