@@ -65,8 +65,12 @@ public class QuotesController {
             return new ModelAndView("addNewQuote").addObject("quote", quote);
         }
 
-        repository.addQuote(quote.getQuote(), quote.getQuoteType());
-
+        if(quote.getQuote().charAt(0)!='"' && quote.getQuote().charAt(quote.getQuote().length()-1)!='"') {
+            repository.addQuote('"' + quote.getQuote() + '"', quote.getQuoteType());
+        } else {
+            repository.addQuote(quote.getQuote(), quote.getQuoteType());
+        }
+        
         return new ModelAndView("redirect:/quotes");
     }
 
