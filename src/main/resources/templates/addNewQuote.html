@@ -18,7 +18,7 @@
       </select>
     </div>
     <p>New quote:
-      <input type="text" placeholder="Begin and end quote with &#34; &#34;"  th:field="*{quote}" id="input"/>
+      <input id="quotes" type="text" placeholder="Begin and end quote with &#34; &#34;"  th:field="*{quote}" id="input"/>
       <input class="addButton" type="submit" value="Add quote"/>
       <p class="validationError" th:each="err : ${#fields.errors('quote')}" th:text="${err}"></p>
     </p>

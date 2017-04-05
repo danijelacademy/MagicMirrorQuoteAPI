@@ -109,8 +109,8 @@ input {
     text-align: center;
     vertical-align: middle;
     border: 1px solid #000000;
-    border-radius: 15px;
-    background: #ffffff;
+    border-radius: 5px;
+    background: #cccccc;
     text-shadow: #ffffff 1px 1px 1px;
     font: normal normal bold 20px arial;
     color: #111111;
@@ -149,7 +149,7 @@ input {
 }
 
 #dash {
-    margin-bottom: 300px;
+    margin-bottom: 30px;
 }
 
 .portfolio-grid li > a,
@@ -291,4 +291,14 @@ select{
     text-align: center;
     vertical-align: middle;
     padding: 10px auto;
+}
+
+#quotes {
+    height: 50px;
+    width: 405px;
+    background-image: url(http://www.quotemaster.org/images/30/306f24f974fcc4f84621cce9a796787d.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position-x: 365px;
+    background-position-y: 6px;
 }
