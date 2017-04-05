@@ -11,7 +11,7 @@
 
   <form id="quoteType" action="#" th:action="@{/newQuote}" method="post" th:object="${quote}" >
   <div class="dropbtn">
-      <select name="quoteTypeList" th:field="*{quoteType}" class="dropbtn">
+      <select name="Select" th:field="*{quoteType}" class="dropbtn">
         <option hidden="Select"  >Select your option </option>
         <option value="Movies" >Movies </option>
         <option value="Inspirational" >Inspirational</option>
