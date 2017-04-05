@@ -11,13 +11,19 @@
 
   <form id="quoteType" action="#" th:action="@{/newQuote}" method="post" th:object="${quote}" >
   <div class="dropbtn">
-      <select name="Select" th:field="*{quoteType}" class="dropbtn">
-        <option vaule="" selected>Select your option </option>
+      <select name="quoteTypeList" th:field="*{quoteType}" class="dropbtn">
         <option value="Movies" >Movies </option>
         <option value="Inspirational" >Inspirational</option>
         <option value="Academy" >Academy</option>
       </select>
     </div>
+
+    <select>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="vw">VW</option>
+  <option value="audi" selected>Audi</option>
+</select>
     
       <input id="quotes" type="text" placeholder="Add new quote"  th:field="*{quote}"/>
       <div>
