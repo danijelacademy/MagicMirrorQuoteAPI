@@ -115,7 +115,7 @@ input {
     font: normal normal bold 20px arial;
     color: #111111;
     text-decoration: none;
-    width: 150px;
+    width: 410px;
     height: 30px;
 }
 .addButton:hover,
@@ -303,5 +303,5 @@ select{
     background-position-y: 6px;
 }
 #backlog{
-	width: 200px;
+	width: 133px;
 }
