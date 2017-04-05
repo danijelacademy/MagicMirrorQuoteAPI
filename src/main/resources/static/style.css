@@ -285,9 +285,11 @@ select{
     cursor: pointer;
     border: 1px solid #000000;
     text-shadow: #ffffff 1px 1px 1px;
-    font: normal normal bold 15px arial;
+    font: normal normal 15px arial;
     color: #111111;
     margin-bottom: 20px;
+    width: 180px;
+    padding: 4px;
 }
 option {
     cursor: pointer;
