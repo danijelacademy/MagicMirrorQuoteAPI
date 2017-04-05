@@ -129,7 +129,7 @@ input {
 }
 
 .validationError {
-    color: darkred;
+    color: #cc0000;
 }
 
 
@@ -301,4 +301,7 @@ select{
     background-size: 30px;
     background-position-x: 365px;
     background-position-y: 6px;
+}
+#backlog{
+	width: 200px;
 }

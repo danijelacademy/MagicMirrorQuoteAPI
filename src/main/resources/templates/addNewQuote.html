@@ -19,18 +19,22 @@
     </div>
     
       <input id="quotes" type="text" placeholder="Add new quote"  th:field="*{quote}"/>
-      <input class="addButton" type="submit" value="Add quote"/>
+      <div>
+        <input class="addButton" type="submit" value="Add quote"/>
+      </div>
       <p class="validationError" th:each="err : ${#fields.errors('quote')}" th:text="${err}"></p>
     
   </form>
   <br/>
-  <a href="/quotes">List of quotes</a>
+    <a href="/quotes">
+      <input id="backlog" href="/dashboard" class="button" type="button" value="List quotes"/>
+    </a>
 
     <a href="/dashboard">
-        <input href="/dashboard" class="button" type="button" value="Go back"/>
+        <input id="backlog" href="/dashboard" class="button" type="button" value="Go back"/>
     </a>
     <a href="/logout">
-        <input class="button" type="button" value="Logout"/>
+        <input id="backlog" class="button" type="button" value="Logout"/>
     </a>
 
 </body>
