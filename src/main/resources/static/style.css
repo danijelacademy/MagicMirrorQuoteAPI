@@ -28,6 +28,8 @@ h1 {
     color: white;
     font-size: 80px;
     font-family: 'Questrial',  sans-serif, cursive;
+    margin-top: 70px;
+    margin-bottom: 70px;
 }
 
 p {
@@ -105,7 +107,7 @@ input {
 }
 
 .addButton {
-      display: inline-block;
+    display: inline-block;
     text-align: center;
     vertical-align: middle;
     padding: 10px auto;
