@@ -20,7 +20,7 @@ a:active {
 
 h1 {
     color: white;
-    font-size: 100px;
+    font-size: 105px;
     font-family: 'Questrial', sans-serif, cursive;
 }
 
@@ -66,12 +66,15 @@ body {
     margin-right: auto;
     width: 60%
 }
-#input {
+
+
+input {
     background-color: white;
     text-align: center;
     border-radius: 5px;
     width: 300px;
     height: 30px;
+    margin-bottom: 8px;
 }
 
 
@@ -81,14 +84,13 @@ body {
     vertical-align: middle;
     padding: 10px auto;
     border: 1px solid #000000;
-    border-radius: 15px;
-    background: #ffffff;
-    text-shadow: #ffffff 1px 1px 1px;
-    font: normal normal bold 20px arial;
+    border-radius: 5px;
+    background: #cccccc; 
+    font: normal normal bold 18px arial;
     color: #111111;
     text-decoration: none;
-    width: 300px;
-    height: 30px;
+    width: 304px;
+    height: 34px;
 }
 
 .button:hover,
@@ -144,6 +146,10 @@ body {
 	margin: 5px 5px 5px 5px;
 	vertical-align: top;
     width:212px;
+}
+
+#dash {
+    margin-bottom: 300px;
 }
 
 .portfolio-grid li > a,
