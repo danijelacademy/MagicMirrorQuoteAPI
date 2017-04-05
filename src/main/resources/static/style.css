@@ -275,15 +275,19 @@ animation-fill-mode:both;}
     margin-top: 15px;
 }
 select{
-    cursor: pointer;
-    border: 1px solid #000000;
-    background: #ffffff;
-    text-shadow: #ffffff 1px 1px 1px;
-    font: normal normal bold 20px arial;
-    color: #111111;
+    display: inline-block;
     text-align: center;
     vertical-align: middle;
     padding: 10px auto;
+    border-radius: 5px;
+    background: #cccccc;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid #000000;
+    text-shadow: #ffffff 1px 1px 1px;
+    font: normal normal bold 15px arial;
+    color: #111111;
+    margin-bottom: 20px;
 }
 .dropdown-content{
     cursor: pointer;
