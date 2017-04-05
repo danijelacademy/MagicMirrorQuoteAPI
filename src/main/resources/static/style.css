@@ -105,14 +105,14 @@ input {
 }
 
 .addButton {
-    display: inline-block;
+      display: inline-block;
     text-align: center;
     vertical-align: middle;
+    padding: 10px auto;
     border: 1px solid #000000;
     border-radius: 5px;
-    background: #cccccc;
-    text-shadow: #ffffff 1px 1px 1px;
-    font: normal normal bold 20px arial;
+    background: #cccccc; 
+    font: normal normal bold 18px arial;
     color: #111111;
     text-decoration: none;
     width: 410px;
