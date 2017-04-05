@@ -10,11 +10,12 @@
   <h1 id = 'hP2'>Magic Quotes</h1>
 
   <form id="quoteType" action="#" th:action="@{/newQuote}" method="post" th:object="${quote}" >
-  <div class="dropbtn">Choose theme:
+  <div class="dropbtn">
       <select name="quoteTypeList" th:field="*{quoteType}" class="dropbtn">
-        <option value="Movies" class="dropdown-content">Movies </option>
-        <option value="Inspirational" class="dropdown-content">Inspirational</option>
-        <option value="Academy" class="dropdown-content">Academy</option>
+        <option value="" disabled selected >Select your option </option>
+        <option value="Movies" >Movies </option>
+        <option value="Inspirational" >Inspirational</option>
+        <option value="Academy" >Academy</option>
       </select>
     </div>
     
