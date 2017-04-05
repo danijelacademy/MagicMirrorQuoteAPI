@@ -17,11 +17,11 @@
         <option value="Academy" class="dropdown-content">Academy</option>
       </select>
     </div>
-    <p>New quote:
-      <input id="quotes" type="text" placeholder="Begin and end quote with &#34; &#34;"  th:field="*{quote}"/>
+    
+      <input id="quotes" type="text" placeholder="Add new quote"  th:field="*{quote}"/>
       <input class="addButton" type="submit" value="Add quote"/>
       <p class="validationError" th:each="err : ${#fields.errors('quote')}" th:text="${err}"></p>
-    </p>
+    
   </form>
   <br/>
   <a href="/quotes">List of quotes</a>
