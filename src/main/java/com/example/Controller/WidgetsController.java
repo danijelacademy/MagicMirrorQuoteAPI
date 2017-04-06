@@ -117,18 +117,20 @@ public class WidgetsController {
             String quo="";
 
 
-            if(quote.getQuote().charAt(0)!='"' && quote.getQuote().charAt(quote.getQuote().lastIndexOf('-')-1)!='"') { //funkar
+            if(quote.getQuote().charAt(0)!='"'&& quote.getQuote().charAt(quote.getQuote().lastIndexOf('-')-1)=='"'){
+                quo=quo+'"'+quote.getQuote();
+                repository.addQuote(quo, quote.getQuoteType());
+                System.out.println("kör den icke fungernade metoden");
+            }
+
+            else if(quote.getQuote().charAt(0)!='"' && quote.getQuote().charAt(quote.getQuote().lastIndexOf('-')-1)!='"') { //funkar
                 quo=quo+'"'+quote.getQuote().substring(0, quote.getQuote().lastIndexOf('-')-1)+
                         '"'+quote.getQuote().substring(quote.getQuote().lastIndexOf('-')-1);
                 repository.addQuote(quo, quote.getQuoteType());
                 System.out.println("kör en fungernade metod1");
             }
 
-            else if(quote.getQuote().charAt(0)!='"'){
-                quo=quo+'"'+quote.getQuote();
-                repository.addQuote(quo, quote.getQuoteType());
-                System.out.println("kör den icke fungernade metoden");
-            }
+
 
             else if(quote.getQuote().charAt(0)=='"'&&quote.getQuote().charAt(quote.getQuote().lastIndexOf('-')-1)!='"'){ //funkar
                 quo=quo+quote.getQuote().substring(0, quote.getQuote().lastIndexOf('-')-1)+
@@ -136,7 +138,7 @@ public class WidgetsController {
                 repository.addQuote(quo, quote.getQuoteType());
                 System.out.println("kör en fungernade metod2");
             }
-            
+
 
         }
 
