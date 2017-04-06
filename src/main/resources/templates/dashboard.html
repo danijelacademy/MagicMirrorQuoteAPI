@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <title>MagicWidgets</title>
-    <link rel="stylesheet" type="text/css" th:href="@{style.css}"/> <!-- OBS -->
+    <link rel="stylesheet" type="text/css" th:href="@{style.css}"/>
     <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet"/>
 </head>
 <body class = 'body2'>
@@ -13,18 +13,18 @@
     <div id="portfolio">
     	<ul class="portfolio-grid">
 			<li>
-				<a href="/magicRoute" class="animated flipInX">
+				<a th:href="@{/magicRoute}" class="animated flipInX">
 					<img src="/images/sl.png" alt="img01"/>
 				</a>
 			</li>
 			<li>
-				<a href="/newQuote" class="animated flipInX">
+				<a th:href="@{/newQuote}" class="animated flipInX">
 					<img src="/images/q.png" alt="img01"/>
 				</a>
 			</li>
 			<div id = "dash">
 			<li>
-				<a href="/magicCountdown" class="animated flipInX">
+				<a th:href="@{/magicCountdown}" class="animated flipInX">
 					<img src="/images/countdown1.png" alt="img01"/>
 				</a>
 			</li>
