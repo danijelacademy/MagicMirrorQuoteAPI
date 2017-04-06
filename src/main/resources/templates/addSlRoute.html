@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet"/>
 </head>
 <body class = 'body2'>
-  <h1 id = 'hP2'>SL Route</h1>
+  <h1 id = 'hP2'>Magic Route</h1>
 
   <form id="quoteType" action="#">
       <input id="quotes" type="text" placeholder="Home Address"/>
@@ -15,7 +15,6 @@
       <div>
         <input class="addButton" type="submit" value="Add route"/>
       </div>
-      <p class="validationError" th:each="err : ${#fields.errors('quote')}" th:text="${err}"></p>
 
   </form>
   <br/>
