@@ -379,20 +379,20 @@ th {
 }
 
 #home {
-height: 30px;
+height: 36px;
 width: 300px;
 background-image: url(http://www.pngall.com/wp-content/uploads/2016/04/Home-PNG-Image.png);
 background-repeat: no-repeat;
 background-size: 25px;
 background-position-x: 270px;
-background-position-y: 2px;
+background-position-y: 8px;
 }
 #work {
-height: 30px;
+height: 36px;
 width: 300px;
 background-image: url(http://www.publicdomainpictures.net/pictures/50000/velka/computer-silhouette.jpg);
 background-repeat: no-repeat;
 background-size: 25px;
 background-position-x: 270px;
-background-position-y: 2px;
+background-position-y: 8px;
 }
