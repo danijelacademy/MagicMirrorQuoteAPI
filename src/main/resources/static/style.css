@@ -35,19 +35,21 @@ h1 {
 p {
   color: white;
   font-size: 18px;
-  font-family: sans-serif;
+  font-family: Arial sans-serif;
 }
 
 
 
 td {
   color: white;
-}
+  font-family: Arial sans-serif;
+  font-size: 14px;
+  }
 
 .loginP {
   color: #bec6d3;
   font-size: 18px;
-  font-family: sans-serif;
+  font-family: Arial sans-serif;
   margin-bottom: 10px;
 }
 
@@ -61,7 +63,7 @@ body {
 
 }
 
-.body2 {
+.b2 {
     background-color: black;
     text-align: center;
     margin-left: auto;
