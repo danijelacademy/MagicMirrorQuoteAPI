@@ -109,7 +109,8 @@ input {
     margin-top: 20px;
 }
 
-#routeButton,
+#routeButton:hover,
+#routeButton:focus,
 .button:hover,
 .button:focus {
     opacity: 0.5;
@@ -117,7 +118,7 @@ input {
     text-decoration: none;
 }
 
-#routeButton,
+#routeButton:active,
 .button:active {
     background: #999999;
 }
