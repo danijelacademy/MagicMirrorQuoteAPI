@@ -44,7 +44,7 @@ td {
   color: white;
 }
 
-.loginP{
+.loginP {
   color: #bec6d3;
   font-size: 18px;
   font-family: sans-serif;
@@ -95,7 +95,7 @@ input {
     height: 34px;
 }
 
-#listQuotes{
+#listQuotes {
 	display: inline-block;
     text-align: center;
     vertical-align: middle;
@@ -189,7 +189,7 @@ input {
     z-index: 9999;
 }
 
-.animated{-webkit-animation-duration:1s;
+.animated {-webkit-animation-duration:1s;
 -moz-animation-duration:1s;
 -o-animation-duration:1s;
 animation-duration:1s;
@@ -285,7 +285,7 @@ animation-fill-mode:both;}
 	backface-visibility: visible !important;
 	animation-name: flipInX;
 }
-#addNewQuote{
+#addNewQuote {
     line-height: 50px;
     margin-bottom: 15px;
     margin-top: 15px;
@@ -293,7 +293,7 @@ animation-fill-mode:both;}
 
 
 
-select{
+select {
     display: inline-block;
     text-align: center;
     vertical-align: middle;
@@ -333,8 +333,8 @@ option {
 	width: 133px;
 }
 
-table{
-    display: block;
+table {
+  display: block;
   height: 320px;
   overflow-y: scroll;
   scroll-behavior: smooth;
@@ -344,7 +344,7 @@ table{
   padding-left: 40px;
 }
 
-th{
+th {
   font-size: 25px;
   font-family: sans-serif;
 }
