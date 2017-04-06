@@ -29,10 +29,18 @@ public class ApiController {
     }
 
     @GetMapping("/api/sl")
-    public String returnSL() {
+    public BestObject returnSL() {
 
         String slUrl = "http://api.sl.se/api2/TravelplannerV2/trip.json?key=cf85888d5497444795b1ba969383ebcd&originId=9112&destId=9509&searchForArrival=0";
+        BestObject bestObject = new BestObject();
+        bestObject.url = slUrl;
 
-        return JsonEncoder.encode(slUrl);
+        return bestObject;
+    }
+
+
+    public class BestObject {
+
+        public String url;
     }
 }
