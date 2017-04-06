@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>MagicWidgets</title>
+    <link  rel="stylesheet" type="text/css" th:href="@{style.css}"/>
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet"/>
+</head>
+<body class = 'body2'>
+  <h1 id = 'hP2'>SL Route</h1>
+
+  <form id="quoteType" action="#">
+      <input id="quotes" type="text" placeholder="Home Address"/>
+      <input id="quotes2" type="text" placeholder="Work Address"/>
+      <div>
+        <input class="addButton" type="submit" value="Add route"/>
+      </div>
+      <p class="validationError" th:each="err : ${#fields.errors('quote')}" th:text="${err}"></p>
+
+  </form>
+  <br/>
+    <a href="/dashboard">
+        <input id="backlog" href="/dashboard" class="button" type="button" value="Go back"/>
+    </a>
+    <a href="/logout">
+        <input id="backlog" class="button" type="button" value="Logout"/>
+    </a>
+
+</body>
+</html>
