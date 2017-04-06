@@ -120,13 +120,13 @@ public class WidgetsController {
                         '"'+quote.getQuote().substring(quote.getQuote().lastIndexOf('-')-2);
                 repository.addQuote(quo, quote.getQuoteType());
             }
-            else if(quote.getQuote().charAt(0)!='"'&&quote.getQuote().charAt(quote.getQuote().lastIndexOf('-')-2)=='"'){
+            else if(quote.getQuote().charAt(0)!='"'&&quote.getQuote().charAt(quote.getQuote().lastIndexOf('-')-1)=='"'){
                 quo=quo+'"'+quote.getQuote();
                 repository.addQuote(quo, quote.getQuoteType());
             }
-            else if(quote.getQuote().charAt(0)=='"'&&quote.getQuote().charAt(quote.getQuote().lastIndexOf('-')-2)!='"'){
-                quo=quo+quote.getQuote().substring(0, quote.getQuote().lastIndexOf('-')-2)+
-                        '"'+quote.getQuote().substring(quote.getQuote().lastIndexOf('-')-2);
+            else if(quote.getQuote().charAt(0)=='"'&&quote.getQuote().charAt(quote.getQuote().lastIndexOf('-')-1)!='"'){
+                quo=quo+quote.getQuote().substring(0, quote.getQuote().lastIndexOf('-')-1)+
+                        '"'+quote.getQuote().substring(quote.getQuote().lastIndexOf('-')-1);
                 repository.addQuote(quo, quote.getQuoteType());
             }
 
