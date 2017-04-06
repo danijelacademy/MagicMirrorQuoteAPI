@@ -6,10 +6,7 @@ import com.example.Domain.User;
 import com.example.Repository.Repository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 
@@ -50,6 +47,15 @@ public class WidgetsController {
         }
 
         return new ModelAndView("addSlRoute");
+    }
+
+    @PostMapping("/deleteQuote/{id}")
+    public ModelAndView deleteQuote (HttpSession session, @PathVariable Integer id ) throws Exception {
+        if (session.getAttribute("user") == null) {
+            return new ModelAndView("redirect:/index.html");
+        }
+        repository.deleteQuote(id);
+        return new ModelAndView("redirect:/quotes");
     }
 
 

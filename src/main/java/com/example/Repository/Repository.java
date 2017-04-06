@@ -37,6 +37,7 @@ public class Repository {
 
     private Quote rsQuote(ResultSet rs) throws SQLException {
         return new Quote(
+                rs.getInt(1),//id
                 rs.getString(2),//Quote
                 rs.getString(3)//Kategori
         );
@@ -70,6 +71,7 @@ public class Repository {
     public void addQuote(String MirrorQuote, String QuoteType) throws Exception {
         try (Connection conn = dataSource.getConnection();
             PreparedStatement ps = conn.prepareStatement("INSERT INTO Quotes(MirrorQuote, QuoteType)VALUES (?,?)", new String[]{"id"})) {
+
             ps.setString(1, MirrorQuote);
             ps.setString(2, QuoteType);
 
@@ -78,6 +80,20 @@ public class Repository {
         } catch (SQLException e) {
             throw new Exception(e);
         }
+    }
+
+    public void deleteQuote(int id) throws Exception{
+        try (Connection conn = dataSource.getConnection();
+             PreparedStatement ps = conn.prepareStatement("DELETE FROM Quotes WHERE id=(?)")) {
+            ps.setInt(1, id);
+
+
+            ps.executeUpdate();
+
+        } catch (SQLException e) {
+            throw new Exception(e);
+        }
+
     }
 
 }

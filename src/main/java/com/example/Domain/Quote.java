@@ -12,9 +12,12 @@ public class Quote {
     @NotNull
     private String quoteType;
 
-    public Quote(String quote, String quoteType){
+    private int id;
+
+    public Quote(int id, String quote, String quoteType){
         this.quote=quote;
         this.quoteType=quoteType;
+        this.id=id;
     }
 
     public Quote() {
@@ -34,5 +37,13 @@ public class Quote {
 
     public void setQuoteType(String quoteType) {
         this.quoteType = quoteType;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

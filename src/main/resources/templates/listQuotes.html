@@ -16,6 +16,7 @@
         <tr th:each="quote : ${quotes}">
             <td th:text="${quote.quote}"></td>
             <td th:text="${quote.quoteType}"></td>
+            <td><a th:href="@{/deleteQuote/{id}(id=${quote.id})"><img src="/images/trash.png" alt="trashcan"/></a></td>
         </tr>
     </table>
     <a href="/newQuote" id="addNewQuote">
