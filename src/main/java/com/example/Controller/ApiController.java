@@ -28,4 +28,12 @@ public class ApiController {
         return quotes.get(randomNumber);
     }
 
+    @GetMapping("/api/sl")
+    public String returnSL() {
+
+        String slUrl = "http://api.sl.se/api2/TravelplannerV2/trip.json?key=cf85888d5497444795b1ba969383ebcd&originId=9112&destId=9509&searchForArrival=0";
+
+        return slUrl;
+    }
+
 }
