@@ -7,6 +7,7 @@ import com.sun.jersey.json.impl.writer.JsonEncoder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -28,19 +29,11 @@ public class ApiController {
         return quotes.get(randomNumber);
     }
 
-    @GetMapping("/api/sl")
-    public BestObject returnSL() {
 
-        String slUrl = "http://api.sl.se/api2/TravelplannerV2/trip.json?key=cf85888d5497444795b1ba969383ebcd&originId=9180&destId=9302&searchForArrival=0";
-        BestObject bestObject = new BestObject();
-        bestObject.url = slUrl;
+    @GetMapping("/api/sl/{username}")
+    public BestObject returnSL(@PathVariable String username) {
 
-        return bestObject;
+        return returnSL(username);
+
     }
 
-
-    public class BestObject {
-
-        public String url;
-    }
-}
