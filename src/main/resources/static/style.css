@@ -95,6 +95,22 @@ input {
     height: 34px;
 }
 
+#ListQuotes{
+	display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px auto;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background: #cccccc;
+    font: normal normal bold 18px arial;
+    color: #111111;
+    text-decoration: none;
+    width: 608px;
+    height: 50px;
+    margin-top: 20px;
+}
+
 .button:hover,
 .button:focus {
     opacity: 0.5;
@@ -274,6 +290,9 @@ animation-fill-mode:both;}
     margin-bottom: 15px;
     margin-top: 15px;
 }
+
+
+
 select{
     display: inline-block;
     text-align: center;
@@ -312,4 +331,20 @@ option {
 }
 #backlog{
 	width: 133px;
+}
+
+table{
+    display: block;
+  height: 320px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  text-align:left;
+  background-color:#1f1f21; 
+  padding: 10px;
+  padding-left: 40px;
+}
+
+th{
+  font-size: 25px;
+  font-family: sans-serif;
 }
