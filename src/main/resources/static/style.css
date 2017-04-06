@@ -135,6 +135,21 @@ input {
     height: 30px;
 }
 
+#routeButton {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px auto;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background: #cccccc; 
+    font: normal normal bold 18px arial;
+    color: #111111;
+    text-decoration: none;
+    width: 304x;
+    height: 30px;
+}
+
 .addButton:hover,
 .addButton:focus{
     opacity: 0.5;
