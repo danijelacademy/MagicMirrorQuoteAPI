@@ -36,7 +36,7 @@ public class WidgetsController {
 
     @GetMapping("/dashboard")
     public ModelAndView dashboard(HttpSession session) {
-        if (session.getAttribute("user") == null) { // kollar om user fortfarande är inloggad
+        if (session.getAttribute("user") == null) {
             return new ModelAndView("redirect:/index.html");
         }
 
@@ -64,7 +64,7 @@ public class WidgetsController {
 
     @GetMapping("/newQuote")
     public ModelAndView insertNewQuote(HttpSession session) {
-        if (session.getAttribute("user") == null) { // kollar om user fortfarande är inloggad
+        if (session.getAttribute("user") == null) {
             return new ModelAndView("redirect:/index.html");
         }
 
@@ -76,7 +76,7 @@ public class WidgetsController {
         // @Valid anger att validering ska ske på quote objektet/parametern enligt valideringsannotations i Quote classen.
         // BindingResult innehåller resultat av denna validering och eventuella valideringsfel.
 
-        if (session.getAttribute("user") == null) { // kollar om user fortfarande är inloggad
+        if (session.getAttribute("user") == null) {
             return new ModelAndView("redirect:/index.html");
         }
 

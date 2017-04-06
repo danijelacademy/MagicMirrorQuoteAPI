@@ -29,6 +29,5 @@ public class ApiController {
         return quotes.get(randomNumber);
     }
 
-
 }
 
