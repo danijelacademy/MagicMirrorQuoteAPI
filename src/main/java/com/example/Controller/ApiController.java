@@ -30,9 +30,10 @@ public class ApiController {
     }
 
 
-    @GetMapping("/api/sl/{test}")
-    public BestObject returnSL(@PathVariable String test) {
-        String slUrl =getSlUrl.returnUrl(test);
+
+    @GetMapping("/api/sl/{username}")
+    public BestObject returnSL(@PathVariable String username) {
+        String slUrl =getSlUrl.returnUrl(username);
         BestObject bestObject = new BestObject();
         bestObject.url = slUrl;
         return bestObject;
