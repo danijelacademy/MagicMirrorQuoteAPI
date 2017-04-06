@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>MagicWidgets</title>
+    <link  rel="stylesheet" type="text/css" th:href="@{style.css}"/>             <!-- OBS /style -->
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet"/>
+</head>
+<body class = 'body2'>
+  <h1 id = 'hP2'>Count Down</h1>
+
+  <form id="quoteType" action="#">
+      <input id="quotes" type="text" placeholder="Count down to?"/>
+      <input id="quotes2" type="date" placeholder="Count down date"/>
+      <div>
+        <input class="addButton" type="submit" value="Add Count Down"/>
+      </div>
+
+
+  </form>
+  <br/>
+    <a href="/dashboard">
+        <input class="backlog" href="/dashboard" class="button" type="button" value="Go back"/>
+    </a>
+    <a href="/logout">
+        <input class="backlog" class="button" type="button" value="Logout"/>
+    </a>
+
+</body>
+</html>

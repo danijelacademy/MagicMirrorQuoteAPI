@@ -43,13 +43,23 @@ public class WidgetsController {
         return new ModelAndView("dashboard");
     }
 
-    @GetMapping("/slRoute")
-    public ModelAndView slRoute (HttpSession session) {
+    @GetMapping("/magicRoute")
+    public ModelAndView magicRoute (HttpSession session) {
         if (session.getAttribute("user") == null) {
             return new ModelAndView("redirect:/index.html");
         }
 
         return new ModelAndView("addSlRoute");
+    }
+
+
+    @GetMapping("/magicCountdown")
+    public ModelAndView magicCountdown (HttpSession session) {
+        if (session.getAttribute("user") == null) {
+            return new ModelAndView("redirect:/index.html");
+        }
+
+        return new ModelAndView("addCountDown");
     }
 
     @GetMapping("/newQuote")
