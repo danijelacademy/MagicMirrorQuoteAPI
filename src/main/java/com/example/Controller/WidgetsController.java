@@ -18,7 +18,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-public class QuotesController {
+public class WidgetsController {
 
     @Autowired
     Repository repository;
@@ -41,6 +41,25 @@ public class QuotesController {
         }
 
         return new ModelAndView("dashboard");
+    }
+
+    @GetMapping("/magicRoute")
+    public ModelAndView magicRoute (HttpSession session) {
+        if (session.getAttribute("user") == null) {
+            return new ModelAndView("redirect:/index.html");
+        }
+
+        return new ModelAndView("addSlRoute");
+    }
+
+
+    @GetMapping("/magicCountdown")
+    public ModelAndView magicCountdown (HttpSession session) {
+        if (session.getAttribute("user") == null) {
+            return new ModelAndView("redirect:/index.html");
+        }
+
+        return new ModelAndView("addCountDown");
     }
 
     @GetMapping("/newQuote")

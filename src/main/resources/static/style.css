@@ -44,7 +44,7 @@ td {
   color: white;
 }
 
-.loginP{
+.loginP {
   color: #bec6d3;
   font-size: 18px;
   font-family: sans-serif;
@@ -69,7 +69,6 @@ body {
     width: 60%
 }
 
-
 input {
     background-color: white;
     text-align: center;
@@ -78,7 +77,6 @@ input {
     height: 30px;
     margin-bottom: 8px;
 }
-
 
 .button {
     display: inline-block;
@@ -95,7 +93,7 @@ input {
     height: 34px;
 }
 
-#ListQuotes{
+.listQuotes {
 	display: inline-block;
     text-align: center;
     vertical-align: middle;
@@ -106,11 +104,15 @@ input {
     font: normal normal bold 18px arial;
     color: #111111;
     text-decoration: none;
-    width: 608px;
-    height: 50px;
+    width: 612px;
+    height: 40px;
     margin-top: 20px;
 }
 
+.routebacklog:hover,
+.routebacklog:focus,
+#routeButton:hover,
+#routeButton:focus,
 .button:hover,
 .button:focus {
     opacity: 0.5;
@@ -118,6 +120,8 @@ input {
     text-decoration: none;
 }
 
+.routebacklog:active,
+#routeButton:active,
 .button:active {
     background: #999999;
 }
@@ -136,12 +140,43 @@ input {
     width: 410px;
     height: 30px;
 }
+.routebacklog {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px auto;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background: #cccccc; 
+    font: normal normal bold 14px arial;
+    color: #111111;
+    text-decoration: none;
+    width: 147px;
+    height: 30px;
+}
+
+#routeButton {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px auto;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background: #cccccc; 
+    font: normal normal bold 18px arial;
+    color: #111111;
+    text-decoration: none;
+    width: 304x;
+    height: 30px;
+}
+
 .addButton:hover,
 .addButton:focus{
     opacity: 0.5;
     color: #111111;
     text-decoration: none;
 }
+
 .addButton:active{
     background: #999999;
 }
@@ -149,7 +184,6 @@ input {
 .validationError {
     color: #cc0000;
 }
-
 
 .portfolio-grid {
 	list-style: none;
@@ -189,34 +223,34 @@ input {
     z-index: 9999;
 }
 
-.animated{-webkit-animation-duration:1s;
--moz-animation-duration:1s;
--o-animation-duration:1s;
-animation-duration:1s;
--webkit-animation-fill-mode:both;
--moz-animation-fill-mode:both;
--o-animation-fill-mode:both;
-animation-fill-mode:both;}
+.animated {
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    -o-animation-duration:1s;
+    animation-duration:1s;
+    -webkit-animation-fill-mode:both;
+    -moz-animation-fill-mode:both;
+    -o-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
 
 @-webkit-keyframes flipInX {
     0% {
         -webkit-transform: perspective(400px) rotateX(90deg);
         opacity: 0;
     }
-
     40% {
         -webkit-transform: perspective(400px) rotateX(-10deg);
     }
-
     70% {
         -webkit-transform: perspective(400px) rotateX(10deg);
     }
-
     100% {
         -webkit-transform: perspective(400px) rotateX(0deg);
         opacity: 1;
     }
 }
+
 @-moz-keyframes flipInX {
     0% {
         -moz-transform: perspective(400px) rotateX(90deg);
@@ -226,49 +260,43 @@ animation-fill-mode:both;}
     40% {
         -moz-transform: perspective(400px) rotateX(-10deg);
     }
-
     70% {
         -moz-transform: perspective(400px) rotateX(10deg);
     }
-
     100% {
         -moz-transform: perspective(400px) rotateX(0deg);
         opacity: 1;
     }
 }
+
 @-o-keyframes flipInX {
     0% {
         -o-transform: perspective(400px) rotateX(90deg);
         opacity: 0;
     }
-
     40% {
         -o-transform: perspective(400px) rotateX(-10deg);
     }
-
     70% {
         -o-transform: perspective(400px) rotateX(10deg);
     }
-
     100% {
         -o-transform: perspective(400px) rotateX(0deg);
         opacity: 1;
     }
 }
+
 @keyframes flipInX {
     0% {
         transform: perspective(400px) rotateX(90deg);
         opacity: 0;
     }
-
     40% {
         transform: perspective(400px) rotateX(-10deg);
     }
-
     70% {
         transform: perspective(400px) rotateX(10deg);
     }
-
     100% {
         transform: perspective(400px) rotateX(0deg);
         opacity: 1;
@@ -285,15 +313,14 @@ animation-fill-mode:both;}
 	backface-visibility: visible !important;
 	animation-name: flipInX;
 }
-#addNewQuote{
+
+#addNewQuote {
     line-height: 50px;
     margin-bottom: 15px;
     margin-top: 15px;
 }
 
-
-
-select{
+select {
     display: inline-block;
     text-align: center;
     vertical-align: middle;
@@ -310,6 +337,7 @@ select{
     width: 180px;
     padding: 4px;
 }
+
 option {
     cursor: pointer;
     background: #ffffff;
@@ -329,12 +357,13 @@ option {
     background-position-x: 365px;
     background-position-y: 6px;
 }
-#backlog{
+
+.backlog{
 	width: 133px;
 }
 
-table{
-    display: block;
+table {
+  display: block;
   height: 320px;
   overflow-y: scroll;
   scroll-behavior: smooth;
@@ -344,7 +373,26 @@ table{
   padding-left: 40px;
 }
 
-th{
+th {
   font-size: 25px;
   font-family: sans-serif;
+}
+
+#home {
+height: 30px;
+width: 300px;
+background-image: url(http://www.pngall.com/wp-content/uploads/2016/04/Home-PNG-Image.png);
+background-repeat: no-repeat;
+background-size: 25px;
+background-position-x: 270px;
+background-position-y: 2px;
+}
+#work {
+height: 30px;
+width: 300px;
+background-image: url(http://www.publicdomainpictures.net/pictures/50000/velka/computer-silhouette.jpg);
+background-repeat: no-repeat;
+background-size: 25px;
+background-position-x: 270px;
+background-position-y: 2px;
 }
