@@ -402,9 +402,10 @@ background-position-y: 8px;
 }
 .trashcan{
 	width: 15px;
+    padding-left: 15px;
 	
 }
 
 .theme{
-    padding-left: 5px;
+    padding-left: 15px;
 }
