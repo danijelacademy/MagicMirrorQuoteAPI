@@ -1,4 +1,5 @@
 package com.example.Repository;
+
 import com.example.Domain.Quote;
 import com.example.Domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,27 +14,19 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-
-/**
- * Created by Administrator on 2017-03-30.
- */
-
 @Component
 public class Repository {
 
     @Autowired
     private DataSource dataSource;
 
-
-    //FÖRSTA METOD BÖRJAR HÄR.
-
     public List<Quote> getQuotes() {
         try (Connection conn = dataSource.getConnection();
-             PreparedStatement ps = conn.prepareStatement("SELECT* FROM Quotes")) { //Hämtar alla rader i DB
+             PreparedStatement ps = conn.prepareStatement("SELECT* FROM Quotes")) {
             try (ResultSet rs = ps.executeQuery()) {
-                List<Quote> quotes = new ArrayList<>(); //Skapar en arraylist
-                while(rs.next()){
-                    quotes.add(rsQuote(rs)); //Lagrar resultaten i arrayen
+                List<Quote> quotes = new ArrayList<>();
+                while (rs.next()) {
+                    quotes.add(rsQuote(rs));
                 }
                 return quotes;
             }
@@ -53,7 +46,7 @@ public class Repository {
     public User getUser(String Username, String Password) throws Exception {
 
         try (Connection conn = dataSource.getConnection();
-             PreparedStatement ps = conn.prepareStatement("SELECT mirroruser, userpassword FROM Users WHERE mirroruser= ? AND userpassword= ?")) {
+            PreparedStatement ps = conn.prepareStatement("SELECT mirroruser, userpassword FROM Users WHERE mirroruser= ? AND userpassword= ?")) {
             ps.setString(1, Username);
             ps.setString(2, Password);
 
@@ -64,7 +57,6 @@ public class Repository {
             } catch (SQLException e) {
                 throw new Exception(e);
             }
-
         }
     }
 
@@ -72,14 +64,12 @@ public class Repository {
         return new User(
                 rs.getString("mirroruser"),
                 rs.getString("userpassword")
-
         );
     }
 
-
     public void addQuote(String MirrorQuote, String QuoteType) throws Exception {
         try (Connection conn = dataSource.getConnection();
-             PreparedStatement ps = conn.prepareStatement("INSERT INTO Quotes(MirrorQuote, QuoteType)VALUES (?,?)", new String []{"id"})) {
+            PreparedStatement ps = conn.prepareStatement("INSERT INTO Quotes(MirrorQuote, QuoteType)VALUES (?,?)", new String[]{"id"})) {
             ps.setString(1, MirrorQuote);
             ps.setString(2, QuoteType);
 
@@ -89,6 +79,5 @@ public class Repository {
             throw new Exception(e);
         }
     }
-
 
 }

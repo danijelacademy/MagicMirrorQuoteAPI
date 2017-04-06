@@ -32,7 +32,7 @@ public class AuthController {
     public String submit(HttpSession session, @RequestParam String username, @RequestParam String password) throws Exception {
         User login = repository.getUser(username, password);
         if (login != null) {
-            session.setAttribute("user", username); //sparar användarnamnet i session. Markerar att användaren är inloggad.
+            session.setAttribute("user", username);
             return "redirect:/dashboard";
         }
 

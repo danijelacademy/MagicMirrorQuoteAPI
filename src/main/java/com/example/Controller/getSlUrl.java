@@ -1,8 +1,5 @@
 package com.example.Controller;
 
-/**
- * Created by Administrator on 2017-04-06.
- */
 public class getSlUrl {
 
     public static String returnUrl (String username){
