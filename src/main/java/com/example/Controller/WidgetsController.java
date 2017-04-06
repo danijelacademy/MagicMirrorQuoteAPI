@@ -117,7 +117,7 @@ public class WidgetsController {
             String quo="";
 
 
-            if(quote.getQuote().charAt(0)!='"'&& quote.getQuote().charAt(quote.getQuote().lastIndexOf('-')-1)=='"'){
+            if(quote.getQuote().charAt(0)!='"'&& quote.getQuote().charAt(quote.getQuote().lastIndexOf('-')-2)=='"'){
                 quo=quo+'"'+quote.getQuote();
                 repository.addQuote(quo, quote.getQuoteType());
                 System.out.println("kör den icke fungernade metoden");
