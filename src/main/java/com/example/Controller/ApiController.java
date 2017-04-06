@@ -35,5 +35,4 @@ public class ApiController {
 
         return JsonEncoder.encode(slUrl);
     }
-
 }
