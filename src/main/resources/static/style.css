@@ -95,7 +95,7 @@ input {
     height: 34px;
 }
 
-#listQuotes {
+.listQuotes {
 	display: inline-block;
     text-align: center;
     vertical-align: middle;
@@ -329,7 +329,7 @@ option {
     background-position-x: 365px;
     background-position-y: 6px;
 }
-#backlog{
+.backlog{
 	width: 133px;
 }
 
