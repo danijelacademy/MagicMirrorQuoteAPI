@@ -90,18 +90,46 @@ public class WidgetsController {
             return new ModelAndView("addNewQuote").addObject("quote", quote);
         }
 
-        if(quote.getQuote().charAt(0)!='"' && quote.getQuote().charAt(quote.getQuote().length()-1)!='"') {
-            repository.addQuote('"' + quote.getQuote() + '"', quote.getQuoteType());
+        //Sök igenom strängen efter dash
+        boolean dash = false;
+        for(int i =0; i<quote.getQuote().length();i++){
+            if(quote.getQuote().charAt(i)=='-'){
+              dash=true;
+            }
         }
-        else if(quote.getQuote().charAt(0)!='"'&&quote.getQuote().charAt(quote.getQuote().length()-1)=='"'){
 
-            repository.addQuote('"' + quote.getQuote(), quote.getQuoteType());
+        //ornda fnuttar på strängen
+
+        if(!dash) { //om string inte har dash
+            if (quote.getQuote().charAt(0) != '"' && quote.getQuote().charAt(quote.getQuote().length() - 1) != '"') {
+                repository.addQuote('"' + quote.getQuote() + '"', quote.getQuoteType());
+            } else if (quote.getQuote().charAt(0) != '"' && quote.getQuote().charAt(quote.getQuote().length() - 1) == '"') {
+
+                repository.addQuote('"' + quote.getQuote(), quote.getQuoteType());
+            } else if (quote.getQuote().charAt(0) == '"' && quote.getQuote().charAt(quote.getQuote().length() - 1) != '"') {
+                repository.addQuote(quote.getQuote() + '"', quote.getQuoteType());
+            } else {
+                repository.addQuote(quote.getQuote(), quote.getQuoteType());
+            }
         }
-        else if(quote.getQuote().charAt(0)=='"'&&quote.getQuote().charAt(quote.getQuote().length()-1)!='"'){
-            repository.addQuote(quote.getQuote()+'"', quote.getQuoteType());
-        }
-        else {
-            repository.addQuote(quote.getQuote(), quote.getQuoteType());
+
+        else{ //annars har dash
+            String quo="";
+            if(quote.getQuote().charAt(0)!='"' && quote.getQuote().charAt(quote.getQuote().lastIndexOf('-')-2)!='"') {
+                quo=quo+'"'+quote.getQuote().substring(0, quote.getQuote().lastIndexOf('-')-2)+
+                        '"'+quote.getQuote().substring(quote.getQuote().lastIndexOf('-')-2);
+                repository.addQuote(quo, quote.getQuoteType());
+            }
+            else if(quote.getQuote().charAt(0)!='"'&&quote.getQuote().charAt(quote.getQuote().lastIndexOf('-')-2)=='"'){
+                quo=quo+'"'+quote.getQuote();
+                repository.addQuote(quo, quote.getQuoteType());
+            }
+            else if(quote.getQuote().charAt(0)=='"'&&quote.getQuote().charAt(quote.getQuote().lastIndexOf('-')-2)!='"'){
+                quo=quo+quote.getQuote().substring(0, quote.getQuote().lastIndexOf('-')-2)+
+                        '"'+quote.getQuote().substring(quote.getQuote().lastIndexOf('-')-2);
+                repository.addQuote(quo, quote.getQuoteType());
+            }
+
         }
 
         return new ModelAndView("redirect:/quotes");
