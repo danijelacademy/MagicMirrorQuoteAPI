@@ -29,5 +29,15 @@ public class ApiController {
         return quotes.get(randomNumber);
     }
 
+<<<<<<< HEAD
+=======
+    @GetMapping("/api/sl/{username}")
+    public BestObject returnSL(@PathVariable String test) {
+        String slUrl =getSlUrl.returnUrl(test);
+        BestObject bestObject = new BestObject();
+        bestObject.url = slUrl;
+        return bestObject;
+    }  
+>>>>>>> 3f0f64ba84aa8b003a42018a467274c4ffce5e48
 }
 
