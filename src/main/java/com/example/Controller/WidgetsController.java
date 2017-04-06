@@ -49,7 +49,7 @@ public class WidgetsController {
         return new ModelAndView("addSlRoute");
     }
 
-    @PostMapping("/deleteQuote/{id}")
+    @GetMapping("/deleteQuote/{id}")
     public ModelAndView deleteQuote (HttpSession session, @PathVariable Integer id ) throws Exception {
         if (session.getAttribute("user") == null) {
             return new ModelAndView("redirect:/index.html");
