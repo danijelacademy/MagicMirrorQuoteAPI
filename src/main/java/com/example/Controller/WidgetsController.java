@@ -116,11 +116,8 @@ public class WidgetsController {
         else{ //annars har dash
             String quo="";
 
-            if(quote.getQuote().charAt(0)!='"'&&quote.getQuote().charAt(quote.getQuote().lastIndexOf('-')-1)=='"'){
-                quo=quo+'"'+quote.getQuote();
-                repository.addQuote(quo, quote.getQuoteType());
-            }
-            else if(quote.getQuote().charAt(0)!='"' && quote.getQuote().charAt(quote.getQuote().lastIndexOf('-')-1)!='"') { //funkar
+
+            if(quote.getQuote().charAt(0)!='"' && quote.getQuote().charAt(quote.getQuote().lastIndexOf('-')-1)!='"') { //funkar
                 quo=quo+'"'+quote.getQuote().substring(0, quote.getQuote().lastIndexOf('-')-1)+
                         '"'+quote.getQuote().substring(quote.getQuote().lastIndexOf('-')-1);
                 repository.addQuote(quo, quote.getQuoteType());
@@ -128,6 +125,10 @@ public class WidgetsController {
             else if(quote.getQuote().charAt(0)=='"'&&quote.getQuote().charAt(quote.getQuote().lastIndexOf('-')-1)!='"'){ //funkar
                 quo=quo+quote.getQuote().substring(0, quote.getQuote().lastIndexOf('-')-1)+
                         '"'+quote.getQuote().substring(quote.getQuote().lastIndexOf('-')-1);
+                repository.addQuote(quo, quote.getQuoteType());
+            }
+            else if(quote.getQuote().charAt(0)!='"'){
+                quo=quo+'"'+quote.getQuote();
                 repository.addQuote(quo, quote.getQuoteType());
             }
 
