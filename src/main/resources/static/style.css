@@ -377,3 +377,22 @@ th {
   font-size: 25px;
   font-family: sans-serif;
 }
+
+#home {
+height: 30px;
+width: 300px;
+background-image: url(http://www.pngall.com/wp-content/uploads/2016/04/Home-PNG-Image.png);
+background-repeat: no-repeat;
+background-size: 25px;
+background-position-x: 270px;
+background-position-y: 2px;
+}
+#work {
+height: 30px;
+width: 300px;
+background-image: url(http://www.publicdomainpictures.net/pictures/50000/velka/computer-silhouette.jpg);
+background-repeat: no-repeat;
+background-size: 25px;
+background-position-x: 270px;
+background-position-y: 2px;
+}
