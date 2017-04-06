@@ -11,11 +11,11 @@
     <table>
         <tr>
             <th>Quote</th>
-            <th>Theme</th>
+            <th class="theme">Theme</th>
         </tr>
         <tr th:each="quote : ${quotes}">
             <td th:text="${quote.quote}"></td>
-            <td th:text="${quote.quoteType}"></td>
+            <td class="theme" th:text="${quote.quoteType}"></td>
             <td><a th:href="@{/deleteQuote/{id}(id=${quote.id})}"><img class="trashcan" src="/images/trash.png" alt="trashcan"/></a></td>
         </tr>
     </table>

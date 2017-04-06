@@ -22,7 +22,7 @@ public class Repository {
 
     public List<Quote> getQuotes() {
         try (Connection conn = dataSource.getConnection();
-             PreparedStatement ps = conn.prepareStatement("SELECT* FROM Quotes")) {
+             PreparedStatement ps = conn.prepareStatement("SELECT* FROM Quotes ORDER BY DESC")) {
             try (ResultSet rs = ps.executeQuery()) {
                 List<Quote> quotes = new ArrayList<>();
                 while (rs.next()) {
