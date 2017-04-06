@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8"/>
     <title>MagicWidgets</title>
-    <link  rel="stylesheet" type="text/css" th:href="@{style.css}"/>             <!-- OBS /style -->
+    <link  rel="stylesheet" type="text/css" th:href="@{style.css}"/>             
     <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet"/>
 </head>
 <body class = 'body2'>
-  <h1 id = 'hP2'>Count Down</h1>
+  <h1 id = 'hP2'>Countdown</h1>
   <form id="quoteType" action="#">
-      <input type="text" placeholder="Count down to?"/>
-      <input type="date" placeholder="Count down date"/>
+      <input type="text" placeholder="Countdown to?"/>
       <div>
-        <input class="addButton" type="submit" value="Add Count Down"/>
+          <input type="date" placeholder="Countdown date"/>
+        </div>
+      <div>
+        <input id = "routeButton" type="submit" value="Add Countdown"/>
       </div>
   </form>
   <br/>
     <a href="/dashboard">
-        <input class="backlog button" type="button" value="Go back"/>
+        <input class="button routebacklog" type="button" value="Go back"/>
     </a>
     <a href="/logout">
-        <input class="backlog button" type="button" value="Logout"/>
+        <input class="button routebacklog" type="button" value="Logout"/>
     </a>
 </body>
 </html>
