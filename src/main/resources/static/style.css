@@ -69,7 +69,6 @@ body {
     width: 60%
 }
 
-
 input {
     background-color: white;
     text-align: center;
@@ -78,7 +77,6 @@ input {
     height: 30px;
     margin-bottom: 8px;
 }
-
 
 .button {
     display: inline-block;
@@ -136,12 +134,14 @@ input {
     width: 410px;
     height: 30px;
 }
+
 .addButton:hover,
 .addButton:focus{
     opacity: 0.5;
     color: #111111;
     text-decoration: none;
 }
+
 .addButton:active{
     background: #999999;
 }
@@ -149,7 +149,6 @@ input {
 .validationError {
     color: #cc0000;
 }
-
 
 .portfolio-grid {
 	list-style: none;
@@ -189,34 +188,34 @@ input {
     z-index: 9999;
 }
 
-.animated {-webkit-animation-duration:1s;
--moz-animation-duration:1s;
--o-animation-duration:1s;
-animation-duration:1s;
--webkit-animation-fill-mode:both;
--moz-animation-fill-mode:both;
--o-animation-fill-mode:both;
-animation-fill-mode:both;}
+.animated {
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    -o-animation-duration:1s;
+    animation-duration:1s;
+    -webkit-animation-fill-mode:both;
+    -moz-animation-fill-mode:both;
+    -o-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
 
 @-webkit-keyframes flipInX {
     0% {
         -webkit-transform: perspective(400px) rotateX(90deg);
         opacity: 0;
     }
-
     40% {
         -webkit-transform: perspective(400px) rotateX(-10deg);
     }
-
     70% {
         -webkit-transform: perspective(400px) rotateX(10deg);
     }
-
     100% {
         -webkit-transform: perspective(400px) rotateX(0deg);
         opacity: 1;
     }
 }
+
 @-moz-keyframes flipInX {
     0% {
         -moz-transform: perspective(400px) rotateX(90deg);
@@ -226,49 +225,43 @@ animation-fill-mode:both;}
     40% {
         -moz-transform: perspective(400px) rotateX(-10deg);
     }
-
     70% {
         -moz-transform: perspective(400px) rotateX(10deg);
     }
-
     100% {
         -moz-transform: perspective(400px) rotateX(0deg);
         opacity: 1;
     }
 }
+
 @-o-keyframes flipInX {
     0% {
         -o-transform: perspective(400px) rotateX(90deg);
         opacity: 0;
     }
-
     40% {
         -o-transform: perspective(400px) rotateX(-10deg);
     }
-
     70% {
         -o-transform: perspective(400px) rotateX(10deg);
     }
-
     100% {
         -o-transform: perspective(400px) rotateX(0deg);
         opacity: 1;
     }
 }
+
 @keyframes flipInX {
     0% {
         transform: perspective(400px) rotateX(90deg);
         opacity: 0;
     }
-
     40% {
         transform: perspective(400px) rotateX(-10deg);
     }
-
     70% {
         transform: perspective(400px) rotateX(10deg);
     }
-
     100% {
         transform: perspective(400px) rotateX(0deg);
         opacity: 1;
@@ -285,13 +278,12 @@ animation-fill-mode:both;}
 	backface-visibility: visible !important;
 	animation-name: flipInX;
 }
+
 #addNewQuote {
     line-height: 50px;
     margin-bottom: 15px;
     margin-top: 15px;
 }
-
-
 
 select {
     display: inline-block;
@@ -310,6 +302,7 @@ select {
     width: 180px;
     padding: 4px;
 }
+
 option {
     cursor: pointer;
     background: #ffffff;
@@ -329,6 +322,7 @@ option {
     background-position-x: 365px;
     background-position-y: 6px;
 }
+
 .backlog{
 	width: 133px;
 }
